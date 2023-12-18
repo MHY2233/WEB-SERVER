@@ -8,3 +8,13 @@
     apt update
  
     apt install caddy
+# 测试版本（包括 beta 和候选版本）：
+    apt install -y debian-keyring debian-archive-keyring apt-transport-https
+
+    curl -1sLf 'https://dl.cloudsmith.io/public/caddy/testing/gpg.key' |  gpg --dearmor -o /usr/share/keyrings/caddy-testing-archive-keyring.gpg
+
+    curl -1sLf 'https://dl.cloudsmith.io/public/caddy/testing/debian.deb.txt' |  tee /etc/apt/sources.list.d/caddy-testing.list
+
+    apt update
+
+    apt install caddy
