@@ -1,4 +1,4 @@
-## 稳定版本：
+### 稳定版本：
     apt install -y debian-keyring debian-archive-keyring apt-transport-https
 
     curl -1sLf 'https://dl.cloudsmith.io/public/caddy/stable/gpg.key' |  gpg --dearmor -o /usr/share/keyrings/caddy-stable-archive-keyring.gpg
@@ -8,7 +8,7 @@
     apt update
 
     apt install caddy
-## 测试版本（包括 beta 和候选版本）：
+### 测试版本（包括 beta 和候选版本）：
     apt install -y debian-keyring debian-archive-keyring apt-transport-https
 
     curl -1sLf 'https://dl.cloudsmith.io/public/caddy/testing/gpg.key' |  gpg --dearmor -o /usr/share/keyrings/caddy-testing-archive-keyring.gpg
