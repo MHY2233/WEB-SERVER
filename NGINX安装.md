@@ -18,3 +18,7 @@
     uid                      nginx signing key <signing-key@nginx.com>
 
 如果指纹不同，请删除文件。
+### 要为稳定的nginx软件包设置apt存储库，请运行以下命令：
+    echo "deb [signed-by=/usr/share/keyrings/nginx-archive-keyring.gpg] \
+    http://nginx.org/packages/debian `lsb_release -cs` nginx" \
+    |  tee /etc/apt/sources.list.d/nginx.list
