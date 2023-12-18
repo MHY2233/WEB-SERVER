@@ -19,6 +19,32 @@
 
 如果指纹不同，请删除文件。
 ### 要为稳定的nginx软件包设置apt存储库，请运行以下命令：
-    echo "deb [signed-by=/usr/share/keyrings/nginx-archive-keyring.gpg] \
-    http://nginx.org/packages/debian `lsb_release -cs` nginx" \
+```
+echo "deb [signed-by=/usr/share/keyrings/nginx-archive-keyring.gpg] \
+http://nginx.org/packages/debian `lsb_release -cs` nginx" \
     |  tee /etc/apt/sources.list.d/nginx.list
+```
+### 如果您想使用mainlinenginx软件包，请转用以下命令：
+```
+echo "deb [signed-by=/usr/share/keyrings/nginx-archive-keyring.gpg] \
+http://nginx.org/packages/mainline/debian `lsb_release -cs` nginx" \
+    |  tee /etc/apt/sources.list.d/nginx.list
+```
+### 设置存储库固定，以更喜欢我们的软件包而不是分发提供的软件包：
+```
+echo -e "Package: *\nPin: origin nginx.org\nPin: release o=nginx\nPin-Priority: 900\n" \
+    |  tee /etc/apt/preferences.d/99nginx
+```
+### 安装NGINX软件包：
+```
+apt update
+apt install nginx
+```
+### 启动NGINX开源：
+    nginx
+### 验证NGINX开源是否已启动并运行：
+```
+curl -I 127.0.0.1
+HTTP/1.1 200 OK
+Server: nginx/1.25.1
+```
