@@ -8,4 +8,8 @@
     acme.sh --installcert -d 你的域名 --fullchainpath /root/fullchain.crt --keypath /root/private.key --ecc --force
 
 #### 手动更新证书
-    ~/.acme.sh/acme.sh --renew -d 你的域名 --force --ecc
+    acme.sh/acme.sh --renew -d 你的域名 --force --ecc
+
+#### 更新 acme.sh
+
+手动升级 acme.sh 到最新版 `acme.sh --upgrade`
