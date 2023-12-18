@@ -12,7 +12,7 @@
 
 #### 更新 acme.sh
 ```bash
-# 手动升级 acme.sh 到最新版:*
+# 手动升级 acme.sh 到最新版:
 
 acme.sh --upgrade
 
@@ -24,3 +24,5 @@ acme.sh --upgrade --auto-upgrade
 
 acme.sh --upgrade --auto-upgrade
 ```
+#### 查看已安装证书信息
+    acme.sh --info -d example.com
