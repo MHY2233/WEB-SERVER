@@ -12,7 +12,15 @@
 
 #### 更新 acme.sh
 ```bash
-手动升级 acme.sh 到最新版 `acme.sh --upgrade`
+手动升级 acme.sh 到最新版:
 
-自动更新 acme.sh 到最新版 `acme.sh --upgrade --auto-upgrade`
+acme.sh --upgrade
+
+自动更新 acme.sh 到最新版:
+
+acme.sh --upgrade --auto-upgrade
+
+关闭自动更新
+
+acme.sh --upgrade --auto-upgrade
 ```
