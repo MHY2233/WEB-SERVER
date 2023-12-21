@@ -1,7 +1,7 @@
 ### 更新Debian存储库信息：
     apt-get update
 ### 安装NGINX开源软件包：
-    apt-get install nginx
+    apt-get install nginx -y
 ### 验证安装：
     nginx -v
 ### 从官方NGINX存储库安装预构建的Debian软件包
@@ -37,8 +37,7 @@ echo -e "Package: *\nPin: origin nginx.org\nPin: release o=nginx\nPin-Priority: 
 ```
 ### 安装NGINX软件包：
 ```
-apt update
-apt install nginx
+apt update && apt install nginx -y
 ```
 ### 启动NGINX开源：
     nginx
