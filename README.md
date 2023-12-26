@@ -3,7 +3,7 @@
 #### 安装证书
 ```bash
 #安装acme.sh
-curl https://get.acme.sh | sh -s email=my@example.com && . .bashrc
+curl https://get.acme.sh | sh -s email=my@example.com && source ~/.bashrc
 
 #生成证书
 acme.sh --issue -d 你的域名 --standalone -k ec-256 --force
